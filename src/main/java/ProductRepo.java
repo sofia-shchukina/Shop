@@ -15,12 +15,12 @@ public class ProductRepo {
     }
 
 
-    public Product get(int i) throws NotAProductException, NotAnOrderException {
+    public Product get(int i) throws NotAProductException {
 
         if (products.containsKey(i)) {
             return products.get(i);
         } else {
-            throw new NotAnOrderException("There is no product with this index");
+            throw new NotAProductException("There is no product with this index");
         }
     }
 }

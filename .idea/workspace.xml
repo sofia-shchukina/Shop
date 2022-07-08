@@ -57,19 +57,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShopServiceTest.getProductIndexDoesNotExist">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client" />
+  <component name="RunManager" selected="JUnit.ShopServiceTest.listOrders">
+    <configuration name="ShopServiceTest.addOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Shop-ServiceSonia" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
+      <option name="METHOD_NAME" value="addOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopServiceTest.emptyListProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopServiceTest.addOrderFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
-      <option name="METHOD_NAME" value="emptyListProducts" />
+      <option name="METHOD_NAME" value="addOrderFails" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,11 +98,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopServiceTest.listProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopServiceTest.listOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
-      <option name="METHOD_NAME" value="listProducts" />
+      <option name="METHOD_NAME" value="listOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShopServiceTest.listOrders" />
+        <item itemvalue="JUnit.ShopServiceTest.addOrderFails" />
+        <item itemvalue="JUnit.ShopServiceTest.addOrder" />
         <item itemvalue="JUnit.ShopServiceTest.getProductIndexDoesNotExist" />
         <item itemvalue="JUnit.ShopServiceTest.getProduct" />
-        <item itemvalue="JUnit.ShopServiceTest.emptyListProducts" />
-        <item itemvalue="JUnit.ShopServiceTest.listProducts" />
-        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +128,7 @@
       <updated>1657269034838</updated>
       <workItem from="1657269036227" duration="10883000" />
       <workItem from="1657284079553" duration="4806000" />
+      <workItem from="1657289504290" duration="2149000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1657281867390</created>
@@ -147,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657287382635</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial Commit">
+      <created>1657289575656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657289575656</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <created>1657289731253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657289731253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

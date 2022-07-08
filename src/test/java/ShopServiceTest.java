@@ -38,7 +38,7 @@ class ShopServiceTest {
     }
 
     @Test
-    void getProduct() throws NotAProductException, NotAnOrderException {
+    void getProduct() throws NotAProductException {
         Product one = new Product(4, "Spoon");
         Product two = new Product(54, "Knife");
         Product three = new Product(3456, "Fork");
@@ -75,15 +75,67 @@ class ShopServiceTest {
 
     }
 
-    //@Test
-    void addOrder() {
+    @Test
+    void addOrderAndGetOrder() throws NotAnOrderException {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Map <Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(),one);
+        testHashMap.put(two.getId(),two);
+        Order order = new Order(0,testHashMap);
+        OrderRepo testOrderRepo = new OrderRepo();
+        ShopService shopService = new ShopService(testOrderRepo);
+
+        shopService.addOrder(order);
+
+        Order actual = shopService.getOrder(0);
+        Assertions.assertEquals(order,actual);
     }
 
     @Test
-    void getOrder() {
+    void addOrderAndGetOrderFails() throws NotAnOrderException {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Map <Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(),one);
+        testHashMap.put(two.getId(),two);
+        Order order = new Order(0,testHashMap);
+        OrderRepo testOrderRepo = new OrderRepo();
+        ShopService shopService = new ShopService(testOrderRepo);
+
+        shopService.addOrder(order);
+
+        try {
+            shopService.getOrder(5);
+            Assertions.fail();
+        } catch (NotAnOrderException e) {
+
+        }
+
     }
 
     @Test
     void listOrders() {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Map <Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(),one);
+        testHashMap.put(two.getId(),two);
+        Order order = new Order(0,testHashMap);
+        Map <Integer, Product> testHashMap2 = new HashMap<>();
+        testHashMap2.put(one.getId(),one);
+        Order order2 = new Order(1,testHashMap2);
+
+        OrderRepo testOrderRepo = new OrderRepo();
+        ShopService shopService = new ShopService(testOrderRepo);
+
+        shopService.addOrder(order);
+        shopService.addOrder(order2);
+        Map<Integer,Order> actual = shopService.listOrders();
+        Map<Integer,Order> expected = new HashMap<>();
+        expected.put(0,order);
+        expected.put(1,order2);
+
+        Assertions.assertEquals(expected, actual);
     }
 }
