@@ -3,14 +3,14 @@ import java.util.List;
 import java.util.Map;
 
 public class ProductRepo {
-    List<Product> products;
+    Map<Integer, Product> products;
 
 
-    public List<Product> list (){
+    public Map<Integer, Product> list (){
         return products;
     }
 
-    public ProductRepo(List<Product> products) {
+    public ProductRepo(Map<Integer, Product> products) {
         this.products = products;
     }
 

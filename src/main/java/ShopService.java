@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ShopService {
     ProductRepo productRepo;
     OrderRepo orderRepo;
 
 
-    public List<Product> listProducts(){
+    public Map<Integer, Product> listProducts(){
         return productRepo.list();
     }
 
@@ -29,7 +30,7 @@ public class ShopService {
         return orderRepo.get(i);
     }
 
-    public List listOrders() {
+    public Map<Integer, Order> listOrders() {
         return orderRepo.list();
     }
 }
