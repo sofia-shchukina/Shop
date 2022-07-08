@@ -23,7 +23,7 @@ public class ShopService {
     public ShopService(OrderRepo orderRepo) {
         this.orderRepo = orderRepo;
     }
-    public Product getProduct(int i) throws NotAProductException {
+    public Product getProduct(int i) throws NotAProductException, NotAnOrderException {
         return productRepo.get(i);
     }
 

@@ -16,10 +16,10 @@ class ShopServiceTest {
         Product one = new Product(4, "Spoon");
         Product two = new Product(54, "Knife");
         Product three = new Product(3456, "Fork");
-        HashMap <Integer, Product> testHashMap= new HashMap<>();
-        testHashMap.put(one.getId(),one);
-        testHashMap.put(two.getId(),two);
-        testHashMap.put(three.getId(),three);
+        HashMap<Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(), one);
+        testHashMap.put(two.getId(), two);
+        testHashMap.put(three.getId(), three);
         ProductRepo testProductRepo = new ProductRepo(testHashMap);
         ShopService testShopservice = new ShopService(testProductRepo);
 
@@ -29,7 +29,7 @@ class ShopServiceTest {
 
     @Test
     void emptyListProducts() {
-        HashMap <Integer, Product> testHashMap= new HashMap<>();
+        HashMap<Integer, Product> testHashMap = new HashMap<>();
         ProductRepo testProductRepo = new ProductRepo(testHashMap);
         ShopService testShopservice = new ShopService(testProductRepo);
 
@@ -38,23 +38,7 @@ class ShopServiceTest {
     }
 
     @Test
-    void getProduct() throws NotAProductException {
-        Product one = new Product(4, "Spoon");
-        Product two = new Product(54, "Knife");
-        Product three = new Product(3456, "Fork");
-        HashMap <Integer, Product> testHashMap= new HashMap<>();
-        testHashMap.put(one.getId(),one);
-        testHashMap.put(two.getId(),two);
-        testHashMap.put(three.getId(),three);
-        ProductRepo testProductRepo = new ProductRepo(testHashMap);
-        ShopService testShopservice = new ShopService(testProductRepo);
-
-        Product actual = testShopservice.getProduct(4);
-        Assertions.assertEquals(one, actual);
-
-    }
-    @Test
-    void getProductIndexDoesNotExist() throws NotAProductException {
+    void getProduct() throws NotAProductException, NotAnOrderException {
         Product one = new Product(4, "Spoon");
         Product two = new Product(54, "Knife");
         Product three = new Product(3456, "Fork");
@@ -65,9 +49,32 @@ class ShopServiceTest {
         ProductRepo testProductRepo = new ProductRepo(testHashMap);
         ShopService testShopservice = new ShopService(testProductRepo);
 
+        Product actual = testShopservice.getProduct(4);
+        Assertions.assertEquals(one, actual);
 
-        assertEquals("expected messages", exception.getMessage());
     }
+
+    @Test
+    void getProductIndexDoesNotExist() throws NotAProductException, NotAnOrderException {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Product three = new Product(3456, "Fork");
+        HashMap<Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(), one);
+        testHashMap.put(two.getId(), two);
+        testHashMap.put(three.getId(), three);
+        ProductRepo testProductRepo = new ProductRepo(testHashMap);
+        ShopService testShopservice = new ShopService(testProductRepo);
+
+        try {
+            testShopservice.getProduct(5646);
+            Assertions.fail();
+        } catch (NotAProductException e) {
+
+        }
+
+    }
+
     @Test
     void addOrder() {
     }

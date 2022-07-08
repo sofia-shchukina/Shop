@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e5a201e-5198-462d-9665-8290b3d2063d" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NotAnOrderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NotAnOrderException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ShopServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopServiceTest.java" afterDir="false" />
     </list>
@@ -61,13 +60,13 @@
   <component name="RunManager" selected="JUnit.ShopServiceTest.getProductIndexDoesNotExist">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
-      <module name="Shop-Service" />
+      <module name="Shop-ServiceSonia" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ShopServiceTest.emptyListProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop-Service" />
+      <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
       <option name="METHOD_NAME" value="emptyListProducts" />
@@ -77,7 +76,7 @@
       </method>
     </configuration>
     <configuration name="ShopServiceTest.getProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop-Service" />
+      <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
       <option name="METHOD_NAME" value="getProduct" />
@@ -87,7 +86,7 @@
       </method>
     </configuration>
     <configuration name="ShopServiceTest.getProductIndexDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop-Service" />
+      <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
       <option name="METHOD_NAME" value="getProductIndexDoesNotExist" />
@@ -97,7 +96,7 @@
       </method>
     </configuration>
     <configuration name="ShopServiceTest.listProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop-Service" />
+      <module name="Shop-ServiceSonia" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ShopServiceTest" />
       <option name="METHOD_NAME" value="listProducts" />
@@ -125,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657269034838</updated>
       <workItem from="1657269036227" duration="10883000" />
-      <workItem from="1657284079553" duration="3283000" />
+      <workItem from="1657284079553" duration="4806000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1657281867390</created>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657284883232</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <created>1657287382635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657287382635</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
