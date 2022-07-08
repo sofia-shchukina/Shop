@@ -75,7 +75,7 @@ class ShopServiceTest {
 
     }
 
-    @Test
+    //@Test
     void addOrder() {
     }
 
