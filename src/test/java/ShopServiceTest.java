@@ -1,33 +1,82 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShopServiceTest {
 
-    @org.junit.jupiter.api.Test
+
+    @Test
     void listProducts() {
         Product one = new Product(4, "Spoon");
-        Product two = new Product(5, "Chair");
-        Product three = new Product(6, "Sofa");
-        List<Product> productList = new ArrayList<>(List.of(one, two, three));
-        //ProductRepo productRepo = new ProductRepo(productList);
+        Product two = new Product(54, "Knife");
+        Product three = new Product(3456, "Fork");
+        HashMap <Integer, Product> testHashMap= new HashMap<>();
+        testHashMap.put(one.getId(),one);
+        testHashMap.put(two.getId(),two);
+        testHashMap.put(three.getId(),three);
+        ProductRepo testProductRepo = new ProductRepo(testHashMap);
+        ShopService testShopservice = new ShopService(testProductRepo);
 
+        Map<Integer, Product> actual = testShopservice.listProducts();
+        Assertions.assertEquals(testHashMap, actual);
     }
 
-    @org.junit.jupiter.api.Test
-    void getProduct() {
+    @Test
+    void emptyListProducts() {
+        HashMap <Integer, Product> testHashMap= new HashMap<>();
+        ProductRepo testProductRepo = new ProductRepo(testHashMap);
+        ShopService testShopservice = new ShopService(testProductRepo);
+
+        Map<Integer, Product> actual = testShopservice.listProducts();
+        Assertions.assertEquals(testHashMap, actual);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
+    void getProduct() throws NotAProductException {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Product three = new Product(3456, "Fork");
+        HashMap <Integer, Product> testHashMap= new HashMap<>();
+        testHashMap.put(one.getId(),one);
+        testHashMap.put(two.getId(),two);
+        testHashMap.put(three.getId(),three);
+        ProductRepo testProductRepo = new ProductRepo(testHashMap);
+        ShopService testShopservice = new ShopService(testProductRepo);
+
+        Product actual = testShopservice.getProduct(4);
+        Assertions.assertEquals(one, actual);
+
+    }
+    @Test
+    void getProductIndexDoesNotExist() throws NotAProductException {
+        Product one = new Product(4, "Spoon");
+        Product two = new Product(54, "Knife");
+        Product three = new Product(3456, "Fork");
+        HashMap<Integer, Product> testHashMap = new HashMap<>();
+        testHashMap.put(one.getId(), one);
+        testHashMap.put(two.getId(), two);
+        testHashMap.put(three.getId(), three);
+        ProductRepo testProductRepo = new ProductRepo(testHashMap);
+        ShopService testShopservice = new ShopService(testProductRepo);
+
+
+        assertEquals("expected messages", exception.getMessage());
+    }
+    @Test
     void addOrder() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getOrder() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void listOrders() {
     }
 }

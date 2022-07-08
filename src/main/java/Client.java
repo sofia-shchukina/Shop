@@ -19,7 +19,7 @@ public class Client {
         ShopService shopService = new ShopService(productRepo, orderRepo);
         System.out.println(shopService.listProducts ());
         try{
-        System.out.println(shopService.getProduct(10));
+        System.out.println(shopService.getProduct(2));
         }catch (Exception e){
             System.out.println("Sorry, this product does not exist.");
         }
@@ -31,7 +31,7 @@ public class Client {
         Order order = new Order(0, productsToOrder);
         shopService.addOrder(order);
         try {
-            System.out.println(shopService.getOrder(0));
+            System.out.println(shopService.getOrder(3));
         } catch (Exception e){
             System.out.println("Sorry, there is no order with this index.");
         }

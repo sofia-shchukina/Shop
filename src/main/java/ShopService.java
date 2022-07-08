@@ -17,6 +17,12 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
 
+    public ShopService(ProductRepo productRepo) {
+        this.productRepo = productRepo;
+    }
+    public ShopService(OrderRepo orderRepo) {
+        this.orderRepo = orderRepo;
+    }
     public Product getProduct(int i) throws NotAProductException {
         return productRepo.get(i);
     }
