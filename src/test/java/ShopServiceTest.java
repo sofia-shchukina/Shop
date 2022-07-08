@@ -11,7 +11,7 @@ class ShopServiceTest {
         Product two = new Product(5, "Chair");
         Product three = new Product(6, "Sofa");
         List<Product> productList = new ArrayList<>(List.of(one, two, three));
-        ProductRepo productRepo = new ProductRepo(productList);
+        //ProductRepo productRepo = new ProductRepo(productList);
 
     }
 

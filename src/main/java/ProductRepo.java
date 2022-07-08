@@ -6,7 +6,7 @@ public class ProductRepo {
     Map<Integer, Product> products;
 
 
-    public Map<Integer, Product> list (){
+    public Map<Integer, Product> list() {
         return products;
     }
 
@@ -15,7 +15,12 @@ public class ProductRepo {
     }
 
 
-    public Product get(int i) {
-        return products.get(i);
+    public Product get(int i) throws NotAProductException {
+
+        if (products.containsKey(i)) {
+            return products.get(i);
+        } else {
+            throw new NotAProductException("There is no product with this index");
+        }
     }
 }

@@ -10,8 +10,14 @@ public class OrderRepo {
         orders.put(order.getId(), order);
     }
 
-    public Order get(int i) {
-        return orders.get(i);
+    public Order get(int i) throws NotAnOrderException {
+
+        if (orders.containsKey(i)) {
+            return orders.get(i);
+        }
+        else {
+            throw new NotAnOrderException("There is no order with this index");
+        }
     }
 
     public Map<Integer, Order> list() {

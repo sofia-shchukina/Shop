@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2e5a201e-5198-462d-9665-8290b3d2063d" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,15 +39,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -80,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657269034838</updated>
       <workItem from="1657269036227" duration="10883000" />
+      <workItem from="1657284079553" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1657281867390</created>

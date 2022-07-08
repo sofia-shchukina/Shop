@@ -8,7 +8,7 @@ public class ShopService {
     OrderRepo orderRepo;
 
 
-    public Map<Integer, Product> listProducts(){
+    public Map<Integer, Product> listProducts() {
         return productRepo.list();
     }
 
@@ -17,7 +17,7 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
 
-    public Product getProduct(int i) {
+    public Product getProduct(int i) throws NotAProductException {
         return productRepo.get(i);
     }
 
@@ -26,7 +26,7 @@ public class ShopService {
 
     }
 
-    public Order getOrder(int i) {
+    public Order getOrder(int i) throws NotAnOrderException {
         return orderRepo.get(i);
     }
 
